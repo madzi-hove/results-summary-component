@@ -1,47 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="css/jwcomeau-reset.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>Frontend Mentor | Results summary component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <script defer src="js/script.js"></script>
 </head>
+
 <body>
 
-  Your Result
-  76
-  of 100
+  <main class="container">
+    <section class="result">
+      <h1 class="result__heading">Your Result</h1>
+      <div class="average__container">
+        <span class="average-number">76</span>
+        <p class="average-text">of 100</p>
+      </div>
+      <span><strong>Great</strong></span>
+      <p class="result__text">You scored higher than 65% of the people who have taken these tests.</p>
+    </section>
+    <section class="summary">
+      <h1 class="summary__heading">Summary</h1>
 
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
+      <ul class="summary__list">
+        <li class="reaction list__item">
+          <img src="assets/images/icon-reaction.svg" alt="" class="icon">
+          <h2 class="reaction__heading">Reaction</h2>
+          <span class="reaction__result"><strong class="number">80</strong> / 100</span>
+        </li>
+        <li class="memory list__item">
+          <img src="assets/images/icon-memory.svg" alt="" class="icon">
+          <h2 class="memory__heading">Memory</h2>
+          <span class="memory__result"><strong class="number">92</strong> / 100</span>
+        </li>
+        <li class="verbal list__item">
+          <img src="assets/images/icon-verbal.svg" alt="" class="icon">
+          <h2 class="verbal__heading">Verbal</h2>
+          <span class="verbal__result"><strong class="number">61</strong> / 100</span>
+        </li>
+        <li class="visual list__item">
+          <img src="assets/images/icon-visual.svg" alt="" class="icon">
+          <h2 class="visual__heading">Visual</h2>
+          <span class="visual__result"><strong class="number">72</strong> / 100</span>
+        </li>
+      </ul>
 
-  Reaction
-  80 / 100
+      <a href="" class="summary__link">Continue</a>
+    </section>
+  </main>
 
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/madzi-hove">Madzi Hove</a>.
+    </div>
+  </footer>
 </body>
+
 </html>
