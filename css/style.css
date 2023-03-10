@@ -13,8 +13,8 @@
 	--light-slate-blue: hsl(252, 100%, 67%);
 	--light-royal-blue: hsl(241, 81%, 54%);
 	/* circle */
-	--violet-blue: hsla(256, 72%, 46%, 1);
-	--persian-blue: hsla(241, 72%, 46%, 0);
+	--violet-blue: hsla(256, 72%, 46%, 0.8);
+	--persian-blue: hsla(241, 72%, 46%, 0.1);
 
 	/* neutral */
 	--white: hsl(0, 0%, 100%);
@@ -32,7 +32,15 @@ body {
 }
 
 /* container styles */
-/* result styles */
+
+/* result & summary section heading */
+.result__heading,
+.summary__heading {
+	font-size: 1.3rem;
+	margin-top: 1rem;
+}
+
+/* result section styles */
 .result {
 	color: var(--white);
 	background: linear-gradient(
@@ -43,12 +51,6 @@ body {
 	text-align: center;
 	border-radius: 0 0 25px 25px;
 	padding: 0.5rem 0 1rem;
-}
-
-.result__heading,
-.summary__heading {
-	font-size: 1.3rem;
-	margin-top: 1rem;
 }
 
 .average-text,
@@ -85,7 +87,7 @@ body {
 	margin: 0 auto 1rem;
 }
 
-/* summary */
+/* summary section */
 .summary {
 	background-color: var(--white);
 	padding: 0.5rem 2rem 1.5rem;
@@ -130,14 +132,14 @@ body {
 
 /* results heading */
 .sub-heading {
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 }
 
+/* sub heading color styles */
 .reaction__heading {
 	color: var(--light-red);
 }
 
-/* sub heading color styles */
 .memory__heading {
 	color: var(--orangey-yellow);
 }
@@ -157,6 +159,20 @@ body {
 
 .number {
 	color: var(--dark-grey-blue);
+}
+
+/* link button */
+.summary__link {
+	display: block;
+	font-size: 1.3rem;
+	text-align: center;
+	text-decoration: none;
+	color: var(--white);
+	background-color: var(--dark-grey-blue);
+	inline-size: 100%;
+	padding: 0.75rem 0;
+	border-radius: 1.5rem;
+	border: 1px solid blue;
 }
 .attribution {
 	font-size: 11px;
