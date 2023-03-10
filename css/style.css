@@ -3,6 +3,11 @@
 
 /* custom variables */
 :root {
+	/* primary */
+	--light-red: hsl(0, 100%, 67%);
+	--orangey-yellow: hsl(39, 100%, 56%);
+	--green-teal: hsl(166, 100%, 37%);
+	--cobalt-blue: hsl(234, 85%, 45%);
 	/* gradients */
 	/* background*/
 	--light-slate-blue: hsl(252, 100%, 67%);
@@ -16,6 +21,9 @@
 	--pale-blue: hsl(221, 100%, 96%);
 	--light-lavender: hsl(241, 100%, 89%);
 	--dark-grey-blue: hsl(224, 30%, 27%);
+
+	/* circle radius */
+	--circle-radius: 10rem;
 }
 
 /* general styles */
@@ -30,25 +38,35 @@ body {
 	background: linear-gradient(
 		180deg,
 		var(--light-slate-blue),
-		var(--light-royal-blue) 60%
+		var(--light-royal-blue) 90%
 	);
 	text-align: center;
 	border-radius: 0 0 25px 25px;
 	padding: 0.5rem 0 1rem;
 }
 
-.result__heading {
-	font-size: 1.2rem;
+.result__heading,
+.summary__heading {
+	font-size: 1.3rem;
 	margin-top: 1rem;
 }
 
+.average-text,
+.result__text {
+	color: var(--light-lavender);
+}
+
 .average__container {
-	height: 10rem;
-	width: 10rem;
+	background: linear-gradient(
+		180deg,
+		var(--violet-blue),
+		var(--persian-blue) 90%
+	);
+	block-size: var(--circle-radius);
+	inline-size: var(--circle-radius);
 	padding: 1rem;
 	margin: 1rem auto;
 	border-radius: 50%;
-	background-color: var(--light-royal-blue);
 }
 
 .average-number {
@@ -63,10 +81,83 @@ body {
 }
 
 .result__text {
-	width: 75%;
+	inline-size: 75%;
 	margin: 0 auto 1rem;
 }
 
+/* summary */
+.summary {
+	background-color: var(--white);
+	padding: 0.5rem 2rem 1.5rem;
+}
+
+/* summary results container */
+.list__item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.75rem 1rem;
+	margin: 1rem 0;
+	border: 1px solid blue;
+	border-radius: 0.5rem;
+}
+
+/* container background styles */
+.reaction {
+	background-color: hsl(0, 100%, 67%, 0.1);
+}
+
+.memory {
+	background-color: hsl(39, 100%, 56%, 0.1);
+}
+
+.verbal {
+	background-color: hsl(166, 100%, 37%, 0.1);
+}
+
+.visual {
+	background-color: hsl(234, 85%, 45%, 0.1);
+}
+
+/* icon & heading container */
+.summary__sub-heading-container {
+	display: flex;
+}
+
+.icon {
+	margin-right: 0.75rem;
+}
+
+/* results heading */
+.sub-heading {
+	font-size: 1.2rem;
+}
+
+.reaction__heading {
+	color: var(--light-red);
+}
+
+/* sub heading color styles */
+.memory__heading {
+	color: var(--orangey-yellow);
+}
+
+.verbal__heading {
+	color: var(--green-teal);
+}
+
+.visual__heading {
+	color: var(--cobalt-blue);
+}
+
+/* test result */
+.test-result {
+	color: var(--light-lavender);
+}
+
+.number {
+	color: var(--dark-grey-blue);
+}
 .attribution {
 	font-size: 11px;
 	text-align: center;
