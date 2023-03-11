@@ -1,5 +1,11 @@
-/* import font */
-@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+/* add font */
+@font-face {
+	font-family: "hanken_groteskregular";
+	src: url(../assets/fonts/hankengrotesk-variablefont_wght-webfont.woff2);
+	src: url(../assets/fonts/hankengrotesk-variablefont_wght-webfont.woff);
+	font-weight: normal;
+	font-style: normal;
+}
 
 /* custom variables */
 :root {
@@ -28,11 +34,30 @@
 
 /* general styles */
 body {
+	display: grid;
+	grid-template:
+		"main"
+		"footer" 25px
+		/ 1fr;
+	place-items: center;
 	font-family: "Hanken Grotesk", sans-serif;
 }
 
-/* container styles */
+footer {
+	grid-area: footer;
+}
 
+/* container styles */
+.container {
+	grid-area: main;
+	display: grid;
+	grid-template:
+		"result"
+		"summary";
+	background-color: var(--white);
+
+	max-inline-size: 375px;
+}
 /* result & summary section heading */
 .result__heading,
 .summary__heading {
@@ -42,6 +67,7 @@ body {
 
 /* result section styles */
 .result {
+	grid-area: result;
 	color: var(--white);
 	background: linear-gradient(
 		180deg,
@@ -89,6 +115,7 @@ body {
 
 /* summary section */
 .summary {
+	grid-area: summary;
 	background-color: var(--white);
 	padding: 0.5rem 2rem 1.5rem;
 }
@@ -100,7 +127,6 @@ body {
 	align-items: center;
 	padding: 0.75rem 1rem;
 	margin: 1rem 0;
-	border: 1px solid blue;
 	border-radius: 0.5rem;
 }
 
@@ -154,10 +180,6 @@ body {
 
 /* test result */
 .test-result {
-	color: var(--light-lavender);
-}
-
-.number {
 	color: var(--dark-grey-blue);
 }
 
@@ -172,7 +194,6 @@ body {
 	inline-size: 100%;
 	padding: 0.75rem 0;
 	border-radius: 1.5rem;
-	border: 1px solid blue;
 }
 .attribution {
 	font-size: 11px;
@@ -180,4 +201,24 @@ body {
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);
+}
+
+/* media queries */
+/* desktop styles*/
+@media only screen and (min-width: 600px) {
+	body {
+		background-color: var(--pale-blue);
+	}
+
+	.container {
+		grid-template: "result summary" / 1fr 1fr;
+		min-block-size: 25%;
+		min-inline-size: 600px;
+		border-radius: 25px;
+		overflow: hidden;
+	}
+
+	.result {
+		border-radius: 0 25px 25px 0;
+	}
 }
