@@ -207,14 +207,15 @@ footer {
 /* desktop styles*/
 @media only screen and (min-width: 600px) {
 	body {
-		background-color: var(--pale-blue);
+		background-color: var(--white);
 	}
 
 	.container {
 		grid-template: "result summary" / 1fr 1fr;
-		min-block-size: 25%;
+		/* min-block-size: 25%; */
 		min-inline-size: 600px;
 		border-radius: 25px;
+		box-shadow: 15px 15px 20px hsl(221, 100%, 96%);
 		overflow: hidden;
 	}
 
